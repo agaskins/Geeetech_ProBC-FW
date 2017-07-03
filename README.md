@@ -1,5 +1,5 @@
 # Marlin 3D Printer Firmware tweaked for Geeetech Pro B/C machines!
-<img align="right" src="../../raw/1.1.x/buildroot/share/pixmaps/logo/marlin-250.png" />
+
 <img align="left" src="https://www.geeetech.com/images/s/Geeetech_20170103021407_2.jpg" />
 
 ## IMPORTANT NOTICE FOR THIS GEEETECH VERSION OF MARLIN:
@@ -19,6 +19,8 @@ And finally, anyone is welcome to contribute, comment, make requests, etc. I am 
 - And much more that I will document here ASAP! Most of these features are enabled in Configuration_adv.h, if you are curious.
 
 [The rest of this is the stock Marlin readme file...]
+
+<img align="right" src="../../raw/1.1.x/buildroot/share/pixmaps/logo/marlin-250.png" />
 
 ## Marlin 1.1
 
