@@ -7753,12 +7753,12 @@ inline void gcode_M121() { endstops.enable_globally(false); }
     ;
 
     // Move XY axes to filament change position or given position
-    const float x_pos = parser.seen('X') ? parser.value_linear_units() : 0
+    float x_pos = parser.seen('X') ? parser.value_linear_units() : 0
       #ifdef PAUSE_PARK_X_POS
         + PAUSE_PARK_X_POS
       #endif
     ;
-    const float y_pos = parser.seen('Y') ? parser.value_linear_units() : 0
+    float y_pos = parser.seen('Y') ? parser.value_linear_units() : 0
       #ifdef PAUSE_PARK_Y_POS
         + PAUSE_PARK_Y_POS
       #endif
@@ -12610,4 +12610,3 @@ void loop() {
   endstops.report_state();
   idle();
 }
-
