@@ -522,8 +522,8 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  * Geeetech Pi3 Pro B/C note: On my printer any Z feedrate > 4.16 (250) has good chance of binding.
- *                            So I went with 4. That works out to 240mm/min which is the format
- *                            RepetierHost likes it in, and that feels blazing fast to me.
+ *                            So I went with 4. That works out to 240mm/min (which is the format
+ *                            RepetierHost likes it in) and that feels blazing fast for Z to me.
  */
 #define DEFAULT_MAX_FEEDRATE          { 300, 300, 4, 30 }
 
@@ -545,8 +545,8 @@
  *
  * Geeetech Pi3 Pro B/C note: The new Marlin defaults for the following three parameters are all set
  *                            to 3000, however for compatibility I'm putting them to the settings
- *                            that Geeetech used in the original firmware. Feel free to experiment
- *                            with higher values!
+ *                            between that and what Geeetech used in the original firmware.
+ *                            Feel free to experiment with higher values!
  */
 #define DEFAULT_ACCELERATION          2000    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
@@ -559,6 +559,12 @@
  * "Jerk" specifies the minimum speed change that requires acceleration.
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
+ *
+ * Geeetech Pi3 Pro B/C note: The defaults, even in Geeetech's original FW, are too much especially
+ *                            for the Y axis. I did a lot of test prints to find stable numbers for
+ *                            the accelerations above to work. You can try 12.5 for Y, it might be
+ *                            fine, but 15 gave me stepper skipping at higher speeds (even with
+ *                            just 1000 accel. So these numbers should be safe!
  */
 #define DEFAULT_XJERK                 15.0
 #define DEFAULT_YJERK                 10.0
@@ -757,6 +763,10 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
+/**
+ * Geeetech Pi3 Pro B/C note: Super weird, but I have to use these settings for E0/E1 on my Pro-C!
+ *                            I'd love to know if this words for everyone else with a Pro-C!
+*/
 #define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
