@@ -1,5 +1,24 @@
-# Marlin 3D Printer Firmware
+# Marlin 3D Printer Firmware tweaked for Geeetech Pro B/C machines!
 <img align="right" src="../../raw/1.1.x/buildroot/share/pixmaps/logo/marlin-250.png" />
+<img align="left" src="https://www.geeetech.com/images/s/Geeetech_20170103021407_2.jpg" />
+
+## IMPORTANT NOTICE FOR THIS GEEETECH VERSION OF MARLIN:
+I have made some minor changes to the RCBugFix branch of Marlin with two objectives in mind:
+- Making it work well with Geeetech Pro B and Pro C models with minimal editing required (although minor, the changes involved can be complicated for many users).
+- Making the Pro B/C a more cutting-edge printer by enabling many features not enabled in Marlin or the stock Geeetech FW.
+
+Also, I try to document my changes as best I can, especially if it might not be obvious why I did something, or if it's very different than the defaults. I would say under normal circumstances it's over-commenting, but I want to make this easy for anyone who isn't a coder, or is not at all familiar with Marlin to understand what I do and why. Most of my comments include the words 'Geeetech' and/or 'ProB/C'. It's pretty consistant, but I will improve consistancy even more soon.
+
+Oh, and this might also be a good starting point if you use any other Geeetech GT2560 based printer, so I'd be excited to hear from you if this helps with any printers besides the Pro B/C! I'd even be willing to make this more general and call it the 'GT2560 Marlin' or something if it turns out there's more people than benefit from this!
+
+And finally, anyone is welcome to contribute, comment, make requests, etc. I am pretty new to doing real work on Github, so if you're a Github veteran and notice something I'm doing that seems... well, wrong or stupid, by all means let me know! I'm using Github and not just releasing zip files on the Geeetech forum because I want to do this right and be as transparent and community-minded as possible. Let's make these printers better together! :)
+
+## Features not in the stock Geeetech firmware:
+- Baby-stepping - allows you to finely adjust your Z axis height after the print starts (double press the rotary encoder while on the home screen).
+- Linear Advance - This exciting new feature is enabled in this firmware but NOT active by default. This is because it takes some understanding to use, and you will need to make specific settings in your slicer to print with this feature. See: <http://marlinfw.org/docs/features/lin_advance.html>
+- And much more that I will document here ASAP! Most of these features are enabled in Configuration_adv.h, if you are curious.
+
+[The rest of this is the stock Marlin readme file...]
 
 ## Marlin 1.1
 
